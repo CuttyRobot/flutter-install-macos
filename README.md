@@ -132,24 +132,57 @@ sudo xcodebuild -runFirstLaunch
 Now we are installing Android Studio(for example 2024.3.2)
 
 After installation we need to accept all requirements and install components
-
+![alt text](/android%20studio/AS_1.png)
 On start page of Android Studio we need to go to "More Actions" and chose SDK Manager
-
+![alt text](/android%20studio/AS_2.png)
 Then on way going to SDK tools tab on top and searching for Android SDK Command Line Tools
+![alt text](/android%20studio/AS_3.png)
+
 
 Installing it, and after that we can run flutter doctor again.
-
+```bash
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.29.3, on macOS 15.5 24F74 darwin-arm64 (Rosetta),
+    locale en-US)
+[!] Android toolchain - develop for Android devices (Android SDK version 36.0.0)
+    ! Some Android licenses not accepted. To resolve this, run: flutter doctor
+      --android-licenses
+[✓] Xcode - develop for iOS and macOS (Xcode 16.4)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2024.3)
+[✓] Connected device (3 available)
+[✓] Network resources
+```
 Using command provided by Flutter Doctor:
 ```bash
-
+flutter doctor --android-licenses
 ```
-
-And again check flutter doctor:
 ```bash
+<user-name>@mac development % flutter doctor --android-licenses
+/Users/<user-name>/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager: line 173: test: : integer expression expected
+[=======================================] 100% Computing updates...             
+4 of 6 SDK package licenses not accepted.
+Review licenses that have not been accepted (y/N)? y
+```
+And after that you would need to accept other licenses
 
+Now one more check flutter doctor:
+```bash
+[✓] Flutter (Channel stable, 3.29.3, on macOS 15.5 24F74 darwin-arm64 (Rosetta),
+    locale en-US)
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.0.0)
+[✓] Xcode - develop for iOS and macOS (Xcode 16.4)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2024.3)
+[✓] Connected device (3 available)
+[✓] Network resources
+
+• No issues found!
 ```
 
-Result should look like that:
+Wonderful we installed flutter on Mac OS with Android, Chrome and iOS and MacOS.
+This small instruction was made for flutter new-comers and others who want
+to watch how to start code on flutter
 
 
 
