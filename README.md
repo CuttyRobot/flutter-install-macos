@@ -68,16 +68,19 @@ mkdir -p ~/development
 cd ~/development
 unzip ~/Downloads/flutter_macos_3.29.3-stable.zip
 ```
+
 Adding Flutter to PATH
 ```bash
 echo 'export PATH="$PATH:$HOME/development/flutter/bin"' >> ~/.zshrc
 source ~/.zshrc
 ```
+
 Check up result of installation
 ```bash
 which flutter
 flutter --version
 ```
+
 These two commands would show path of Flutter SDK and version of Flutter
 
 ## Flutter Doctor
@@ -85,6 +88,7 @@ After install easiest way to understand what to do further - is to use command f
 ```bash
 flutter doctor
 ```
+
 It would show something like this:
 ```bash
 Doctor summary (to see all details, run flutter doctor -v):
@@ -153,10 +157,12 @@ Doctor summary (to see all details, run flutter doctor -v):
 [✓] Connected device (3 available)
 [✓] Network resources
 ```
+
 Using command provided by Flutter Doctor:
 ```bash
 flutter doctor --android-licenses
 ```
+
 ```bash
 <user-name>@mac development % flutter doctor --android-licenses
 /Users/<user-name>/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager: line 173: test: : integer expression expected
@@ -164,7 +170,8 @@ flutter doctor --android-licenses
 4 of 6 SDK package licenses not accepted.
 Review licenses that have not been accepted (y/N)? y
 ```
-And after that you would need to accept other licenses
+
+And after that you would need to accept other licenses\
 
 Now one more check flutter doctor:
 ```bash
@@ -180,8 +187,8 @@ Now one more check flutter doctor:
 • No issues found!
 ```
 
-Wonderful we installed flutter on Mac OS with Android, Chrome and iOS and MacOS.
-This small instruction was made for flutter new-comers and others who want
+Wonderful, we installed flutter on Mac OS with Android, Chrome and iOS and MacOS.\
+This small instruction-article was made for flutter new-comers and others who want
 to watch how to start code on flutter
 
 
